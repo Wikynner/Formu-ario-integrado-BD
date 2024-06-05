@@ -14,7 +14,7 @@ if(isset($_SESSION['aviso'])){
     $tipo = "aviso"; 
   }
 }
-  $conn = mysqli_connect("127.0.0.1:3306", "root", "", "arquivo_3coq");
+  $conn = mysqli_connect("", "", "", "");
   
   // Recuperar os últimos 5 arquivos adicionados do banco de dados
   $sql = "SELECT ID_ARQUIVO, date_format(data_insert,'%d/%m%/%Y %H:%i:%S') data_insert, SESSAO, DEPARTAMENTO, DESCRICAO FROM arquivo ORDER BY ID_ARQUIVO DESC LIMIT 5";
